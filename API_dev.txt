@@ -1,0 +1,23 @@
+API development
+
+1. venv creation command: py -3 -m venv <name>
+2. c:/Users/acer/FAST_API/venv/Scripts/activate.bat
+3. out of venv command: deactivate
+4. start API command (<main_file_name>: <app_name>): uvicorn app.main:app
+5. start API with constant refreshing by changes: uvicorn app.main:app --reload
+
+!!! you can install all necessary for the projrct packages this way: 
+pip install -r requirements.txt
+
+
+Alembic basic commands (tool for incremental changes in the db structure)
++ alembic init <fold name> # initializes alembic dir in project
++ alembic revision -m "<associated branch msg>"
++ alembic current # shows where we are (cur version)
++ alembic upgrade <rev uid>|+1|+2 # checkout to revision (to newer one)
++ alembic upgrade head
++ alembic downgrade <rev>|-1|-2 # to older version
++ alembic revision --autogenerate -m "<msg>" # scan our models and add necessary tables which are abscent (generate alembic changes auto)
+
+
+
